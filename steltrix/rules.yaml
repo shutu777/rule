@@ -1,8 +1,8 @@
-# steltrix-release-id: 4732992f-10b8-437a-821c-275ffd402350
-# steltrix-version: 12
-# steltrix-version-name: 删除测试分类
-# steltrix-published-at: 2026-07-25T05:21:24Z
-# steltrix-content-hash: cce7d2d461d40810e756d208ca5f7df6850a9c2bed5db2c0c580aa7089be9551
+# steltrix-release-id: 1bec8583-baff-480b-be2a-1b45e6ba576e
+# steltrix-version: 13
+# steltrix-version-name: 增加命名的tmdbid
+# steltrix-published-at: 2026-07-25T10:18:17Z
+# steltrix-content-hash: 7ccee8961605fd79d66f8d3c0d92da8f5a7b2654d6a6dba013c2a55342067aeb
 # 说明：识别词、渲染词与制作组列表按可读单行语法展示，新增和编辑使用可视化字段。
 # 说明：此 YAML 保存可验证的结构化规则；运行时会自动安全编译为 RE2，请勿写入内部转换标记。
 schema_version: 1
@@ -6336,7 +6336,7 @@ naming:
         folder: '{{title}} ({{year}}) {tmdb-{{tmdb_id}}}'
         file: '{{title}} ({{year}}) - {{resolution}}.{{source}}.{{dynamic_range}}.{{edition}}.{{video_codec}}.{{audio_codec}}-{{release_group}}.{{file_ext}}'
       tv:
-        folder: '{{title}} ({{year}})/Season {{season}}'
+        folder: '{{title}} ({{year}}) {tmdb-{{tmdb_id}}}/Season {{season}}'
         file: '{{title}}.{{year}}.{{season_episode}}.第{{episode}}集.{{resolution}}.{{source}}.{{dynamic_range}}.{{video_codec}}-{{release_group}}.{{file_ext}}'
       sanitize:
         unicode: nfc
