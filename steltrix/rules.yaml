@@ -1,8 +1,8 @@
-# steltrix-release-id: 2a05b7fa-9496-4d3c-b840-f5e841588a98
-# steltrix-version: 9
-# steltrix-version-name: 
-# steltrix-published-at: 2026-07-25T04:35:43Z
-# steltrix-content-hash: 80ca7686541c5993458cd95c63b0ffa1cce19ab9f085bc27d65be807b2c6771d
+# steltrix-release-id: 4732992f-10b8-437a-821c-275ffd402350
+# steltrix-version: 12
+# steltrix-version-name: 删除测试分类
+# steltrix-published-at: 2026-07-25T05:21:24Z
+# steltrix-content-hash: cce7d2d461d40810e756d208ca5f7df6850a9c2bed5db2c0c580aa7089be9551
 # 说明：识别词、渲染词与制作组列表按可读单行语法展示，新增和编辑使用可视化字段。
 # 说明：此 YAML 保存可验证的结构化规则；运行时会自动安全编译为 RE2，请勿写入内部转换标记。
 schema_version: 1
@@ -6349,19 +6349,6 @@ naming:
 classification:
   mode: first_match
   movie:
-    - id: class-movie-93871643
-      name: Codex E2E 发布回滚测试
-      enabled: true
-      path: 电影/Codex E2E 测试
-      when:
-        all:
-          - field: filename_keywords
-            operator: equals
-            value: CODEX_E2E_NEVER_MATCH_20260725
-      fallback: false
-      origin:
-        kind: local
-        source_id: local
     - id: import-movie-001-rule-branch-01
       name: 特摄电影
       enabled: true
