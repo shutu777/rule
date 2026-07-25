@@ -1,10 +1,8 @@
-# steltrix-release-id: 3454812c-1fee-4d16-9b96-159502ef6b1b
-# steltrix-version: 8
-# steltrix-version-name: 修复订阅发布回归 20260725
-# steltrix-published-at: 2026-07-25T04:28:17Z
-# steltrix-content-hash: 80ca7686541c5993458cd95c63b0ffa1cce19ab9f085bc27d65be807b2c6771d
-# 说明：识别词、渲染词与制作组列表按可读单行语法展示，新增和编辑使用可视化字段。
-# 说明：此 YAML 保存可验证的结构化规则；运行时会自动安全编译为 RE2，请勿写入内部转换标记。
+# steltrix-release-id: 9a9ef41f-1f49-44b0-a1fd-81731e378252
+# steltrix-version: 5
+# steltrix-version-name: 订阅更新
+# steltrix-published-at: 2026-07-24T12:54:29Z
+# steltrix-content-hash: 47708c8cc203487a10f7610cc4d40d1134aaad9cf74937f111ba634d0fab7ba8
 schema_version: 1
 rule_set:
   id: default
@@ -15,7 +13,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Baha(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Baha)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Baha
@@ -27,7 +25,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])KKTV(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>KKTV)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -KKTV
@@ -39,7 +37,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Hami(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Hami)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Hami
@@ -51,7 +49,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Abema(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Abema)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Abema
@@ -63,7 +61,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])B-Global(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>B-Global)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -B-Global
@@ -75,7 +73,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])MyVideo(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>MyVideo)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -MyVideo
@@ -87,7 +85,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])MyTVSuper(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>MyTVSuper)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -MyTVSuper
@@ -99,7 +97,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Hulu(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Hulu)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Hulu
@@ -111,7 +109,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])TVING(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>TVING)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -TVING
@@ -123,7 +121,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])LINETV(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>LINETV)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -LINETV
@@ -135,7 +133,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Bilibili(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Bilibili)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Bilibili
@@ -147,7 +145,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])IQ(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>IQ)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -IQ
@@ -159,7 +157,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Viu(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Viu)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Viu
@@ -171,7 +169,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])CATCHPLAY(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>CATCHPLAY)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -CatchPlay
@@ -183,7 +181,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])playWEB(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>playWEB)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -playWEB
@@ -195,7 +193,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])friDay(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>friDay)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -friDay
@@ -207,7 +205,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Crunchyroll(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Crunchyroll)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -CR
@@ -219,7 +217,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])NF(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>NF)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Netflix
@@ -231,7 +229,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])AMZN(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>AMZN)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Amazon
@@ -243,7 +241,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])HMAX(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>HMAX)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -MAX
@@ -255,7 +253,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])MAX(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>MAX)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -MAX
@@ -267,7 +265,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])ATVP(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>ATVP)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -AppleTV+
@@ -279,7 +277,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])DSNP(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>DSNP)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Disney+
@@ -291,7 +289,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])iT(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>iT)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -iTunes
@@ -303,7 +301,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])PMSP\+(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>PMSP\+)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Paramount
@@ -315,7 +313,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Netflix(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Netflix)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Netflix
@@ -327,7 +325,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])Amazon(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>Amazon)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -Amazon
@@ -339,7 +337,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=\W|^)AppleTV\+?(?=\W|$)
+    match: (?P<__steltrix_import_prefix>\W|^)(?P<__steltrix_import_value>AppleTV\+?)(?P<__steltrix_import_suffix>\W|$)
     actions:
       - type: replace
         value: -AppleTV+
@@ -351,7 +349,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=\W|^)Disney\+?(?=\W|$)
+    match: (?P<__steltrix_import_prefix>\W|^)(?P<__steltrix_import_value>Disney\+?)(?P<__steltrix_import_suffix>\W|$)
     actions:
       - type: replace
         value: -Disney+
@@ -363,7 +361,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[\W_])iTunes(?=$|[\W_])
+    match: (?P<__steltrix_import_prefix>^|[\W_])(?P<__steltrix_import_value>iTunes)(?P<__steltrix_import_suffix>$|[\W_])
     actions:
       - type: replace
         value: -iTunes
@@ -567,7 +565,7 @@ recognition:
     enabled: true
     source: basename
     engine: re2
-    match: (?<=^|[^A-Za-z0-9])(?i:DV)(?=$|[^A-Za-z0-9])
+    match: (?P<__steltrix_import_prefix>^|[^A-Za-z0-9])(?P<__steltrix_import_value>(?i:DV))(?P<__steltrix_import_suffix>$|[^A-Za-z0-9])
     actions:
       - type: replace
         value: DoVi
@@ -1016,8 +1014,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Abema
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Abema)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Abema
@@ -1030,8 +1028,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Amazon
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Amazon)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Amazon
@@ -1044,8 +1042,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: AppleTV\+
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:AppleTV\+)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: AppleTV+
@@ -1058,8 +1056,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: B-Global
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:B-Global)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: B-Global
@@ -1072,8 +1070,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Baha
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Baha)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Baha
@@ -1086,8 +1084,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Bilibili
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Bilibili)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Bilibili
@@ -1100,8 +1098,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: CatchPlay
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:CatchPlay)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: CatchPlay
@@ -1114,8 +1112,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Crunchyroll
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Crunchyroll)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Crunchyroll
@@ -1128,8 +1126,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Disney\+
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Disney\+)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Disney+
@@ -1142,8 +1140,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: friDay
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:friDay)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: friDay
@@ -1156,8 +1154,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Hami
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Hami)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Hami
@@ -1170,8 +1168,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: MAX
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:MAX)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: MAX
@@ -1184,8 +1182,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Hulu
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Hulu)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Hulu
@@ -1198,8 +1196,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: IQ
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:IQ)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: IQ
@@ -1212,8 +1210,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: iTunes
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:iTunes)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: iTunes
@@ -1226,8 +1224,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: KKTV
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:KKTV)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: KKTV
@@ -1240,8 +1238,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: LINETV
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:LINETV)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: LINETV
@@ -1254,8 +1252,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: MyTVSuper
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:MyTVSuper)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: MyTVSuper
@@ -1268,8 +1266,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: MyVideo
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:MyVideo)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: MyVideo
@@ -1282,8 +1280,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Netflix
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Netflix)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Netflix
@@ -1296,8 +1294,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: PMSP
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:PMSP)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: PMSP
@@ -1310,8 +1308,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: playWEB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:playWEB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: playWEB
@@ -1324,8 +1322,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: TVING
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:TVING)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: TVING
@@ -1338,8 +1336,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Viu
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Viu)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Viu
@@ -1352,8 +1350,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: YouTube
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:YouTube)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: YouTube
@@ -1366,8 +1364,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Paramount
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Paramount)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Paramount
@@ -1380,8 +1378,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 7³ACG
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:7³ACG)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 7³ACG
@@ -1394,8 +1392,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: ADWeb
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:ADWeb)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: ADWeb
@@ -1408,8 +1406,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: ADE
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:ADE)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: ADE
@@ -1422,8 +1420,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: AnimeF@ADE
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:AnimeF@ADE)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: AnimeF@ADE
@@ -1436,8 +1434,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: AliPan
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:AliPan)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: AliPan
@@ -1450,8 +1448,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Amor压制组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Amor压制组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Amor压制组
@@ -1464,8 +1462,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: ANK-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:ANK-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: ANK-Raws
@@ -1478,8 +1476,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: APEX
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:APEX)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: APEX
@@ -1492,8 +1490,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Beatrice-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Beatrice-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Beatrice-Raws
@@ -1506,8 +1504,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: BitsTV
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:BitsTV)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: BitsTV
@@ -1520,8 +1518,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Breeze@Sunny
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Breeze@Sunny)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Breeze@Sunny
@@ -1534,8 +1532,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: CtrlHD
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:CtrlHD)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: CtrlHD
@@ -1548,8 +1546,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: DDR
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:DDR)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: DDR
@@ -1562,8 +1560,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Deadmau-RAWS
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Deadmau-RAWS)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Deadmau-RAWS
@@ -1576,8 +1574,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: DON
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:DON)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: DON
@@ -1590,8 +1588,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: EDITH
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:EDITH)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: EDITH
@@ -1604,8 +1602,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: EMTP-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:EMTP-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: EMTP-Raws
@@ -1618,8 +1616,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: EPSiLON
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:EPSiLON)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: EPSiLON
@@ -1632,8 +1630,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Erai-raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Erai-raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Erai-raws
@@ -1646,8 +1644,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: FLUX
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:FLUX)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: FLUX
@@ -1660,8 +1658,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: FraMeSToR
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:FraMeSToR)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: FraMeSToR
@@ -1674,8 +1672,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: FRDS
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:FRDS)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: FRDS
@@ -1688,8 +1686,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HDS
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HDS)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HDS
@@ -1702,8 +1700,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: dislike@HDsky
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:dislike@HDsky)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: dislike@HDsky
@@ -1716,8 +1714,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HDsky
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HDsky)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HDsky
@@ -1730,8 +1728,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HDCTV
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HDCTV)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HDCTV
@@ -1744,8 +1742,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HDHIVE
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HDHIVE)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HDHIVE
@@ -1758,8 +1756,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HDChina
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HDChina)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HDChina
@@ -1772,8 +1770,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HDVideo
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HDVideo)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HDVideo
@@ -1786,8 +1784,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HiveWeb
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HiveWeb)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HiveWeb
@@ -1800,8 +1798,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HDSWEB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HDSWEB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HDSWEB
@@ -1814,8 +1812,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: iNT Team
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:iNT Team)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: iNT Team
@@ -1828,8 +1826,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: IrizaRaws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:IrizaRaws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: IrizaRaws
@@ -1842,8 +1840,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Kagura
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Kagura)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Kagura
@@ -1856,8 +1854,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: LoliHouse
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:LoliHouse)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: LoliHouse
@@ -1870,8 +1868,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Mo Cuishle
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Mo Cuishle)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Mo Cuishle
@@ -1884,8 +1882,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Moozzi2
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Moozzi2)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Moozzi2
@@ -1898,8 +1896,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: MTeam
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:MTeam)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: MTeam
@@ -1912,8 +1910,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: MT
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:MT)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: MT
@@ -1926,8 +1924,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: MySilu
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:MySilu)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: MySilu
@@ -1940,8 +1938,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Nest@ADWeb
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Nest@ADWeb)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Nest@ADWeb
@@ -1954,8 +1952,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: niizk
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:niizk)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: niizk
@@ -1968,8 +1966,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: NTb
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:NTb)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: NTb
@@ -1982,8 +1980,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: OurBits
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:OurBits)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: OurBits
@@ -1996,8 +1994,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: philosophy-raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:philosophy-raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: philosophy-raws
@@ -2010,8 +2008,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Pure@HDSWEB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Pure@HDSWEB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Pure@HDSWEB
@@ -2024,8 +2022,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: DIY@HDSWEB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:DIY@HDSWEB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: DIY@HDSWEB
@@ -2038,8 +2036,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: yoyola@CHDBits
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:yoyola@CHDBits)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: yoyola@CHDBits
@@ -2052,8 +2050,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Beans@CHDBits
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Beans@CHDBits)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Beans@CHDBits
@@ -2066,8 +2064,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: DreamRu@CHDBits
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:DreamRu@CHDBits)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: DreamRu@CHDBits
@@ -2080,8 +2078,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: KKYY@CHDBits
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:KKYY@CHDBits)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: KKYY@CHDBits
@@ -2094,8 +2092,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Lee@CHDWEB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Lee@CHDWEB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Lee@CHDWEB
@@ -2108,8 +2106,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: CHDBits
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:CHDBits)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: CHDBits
@@ -2122,8 +2120,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: CHDWEB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:CHDWEB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: CHDWEB
@@ -2136,8 +2134,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: RLWeb
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:RLWeb)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: RLWeb
@@ -2150,8 +2148,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SAIO-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SAIO-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SAIO-Raws
@@ -2164,8 +2162,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SADPANDA
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SADPANDA)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SADPANDA
@@ -2178,8 +2176,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SGNB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SGNB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SGNB
@@ -2192,8 +2190,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Skymoon-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Skymoon-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Skymoon-Raws
@@ -2206,8 +2204,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Snow-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Snow-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Snow-Raws
@@ -2220,8 +2218,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SPARKS
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SPARKS)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SPARKS
@@ -2234,8 +2232,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SubsPlease
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SubsPlease)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SubsPlease
@@ -2248,8 +2246,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Sunny
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Sunny)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Sunny
@@ -2262,8 +2260,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SweetSub
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SweetSub)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SweetSub
@@ -2276,8 +2274,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SWTYBLZ
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SWTYBLZ)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SWTYBLZ
@@ -2290,8 +2288,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Suzuya-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Suzuya-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Suzuya-Raws
@@ -2304,8 +2302,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: tG1R0
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:tG1R0)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: tG1R0
@@ -2318,8 +2316,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: TSDM
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:TSDM)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: TSDM
@@ -2332,8 +2330,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: TTG
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:TTG)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: TTG
@@ -2346,8 +2344,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: U2
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:U2)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: U2
@@ -2360,8 +2358,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: DewDream
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:DewDream)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: DewDream
@@ -2374,8 +2372,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: UBits
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:UBits)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: UBits
@@ -2388,8 +2386,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: UBWEB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:UBWEB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: UBWEB
@@ -2402,8 +2400,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: UNTOUCHED
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:UNTOUCHED)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: UNTOUCHED
@@ -2416,8 +2414,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: VCB-Studio
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:VCB-Studio)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: VCB-Studio
@@ -2430,8 +2428,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: WiKi
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:WiKi)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: WiKi
@@ -2444,8 +2442,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Xrip
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Xrip)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Xrip
@@ -2458,8 +2456,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: YingWEB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:YingWEB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: YingWEB
@@ -2472,8 +2470,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Zero-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Zero-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Zero-Raws
@@ -2486,8 +2484,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: ZmWeb
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:ZmWeb)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: ZmWeb
@@ -2500,8 +2498,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: AI-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:AI-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: AI-Raws
@@ -2514,8 +2512,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: AKito秋人
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:AKito秋人)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: AKito秋人
@@ -2528,8 +2526,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: B站小鱼儿呼唤爱
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:B站小鱼儿呼唤爱)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: B站小鱼儿呼唤爱
@@ -2542,8 +2540,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: B站仮面ライダーX酱
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:B站仮面ライダーX酱)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: B站仮面ライダーX酱
@@ -2556,8 +2554,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: BaiduBBB
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:BaiduBBB)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: BaiduBBB
@@ -2570,8 +2568,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: hchcsen
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:hchcsen)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: hchcsen
@@ -2584,8 +2582,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: hydes
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:hydes)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: hydes
@@ -2598,8 +2596,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: mawen1250
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:mawen1250)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: mawen1250
@@ -2612,8 +2610,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Xeon晚生
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Xeon晚生)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Xeon晚生
@@ -2626,8 +2624,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 一只出格君
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:一只出格君)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 一只出格君
@@ -2640,8 +2638,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: ANi
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:ANi)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: ANi
@@ -2654,8 +2652,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: APTX4869
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:APTX4869)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: APTX4869
@@ -2668,8 +2666,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Arid
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Arid)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Arid
@@ -2682,8 +2680,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Amor字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Amor字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Amor字幕组
@@ -2696,8 +2694,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Breeze
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Breeze)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Breeze
@@ -2710,8 +2708,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: COKEMV
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:COKEMV)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: COKEMV
@@ -2724,8 +2722,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: DAY字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:DAY字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: DAY字幕组
@@ -2738,8 +2736,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: FSD字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:FSD字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: FSD字幕组
@@ -2752,8 +2750,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: FSD粉羽社
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:FSD粉羽社)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: FSD粉羽社
@@ -2766,8 +2764,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: GM-Team
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:GM-Team)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: GM-Team
@@ -2780,8 +2778,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: IMAX
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:IMAX)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: IMAX
@@ -2794,8 +2792,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Kawaiika-Raws
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Kawaiika-Raws)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Kawaiika-Raws
@@ -2808,8 +2806,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Knf
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Knf)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Knf
@@ -2822,8 +2820,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: MCE汉化组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:MCE汉化组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: MCE汉化组
@@ -2836,8 +2834,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: MingYSub
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:MingYSub)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: MingYSub
@@ -2850,8 +2848,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: NEO·QSW
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:NEO·QSW)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: NEO·QSW
@@ -2864,8 +2862,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SilverBullet
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SilverBullet)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SilverBullet
@@ -2878,8 +2876,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: sxales
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:sxales)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: sxales
@@ -2892,8 +2890,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: VARYG
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:VARYG)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: VARYG
@@ -2906,8 +2904,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: WBX
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:WBX)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: WBX
@@ -2920,8 +2918,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: X酱
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:X酱)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: X酱
@@ -2934,8 +2932,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: YYQ字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:YYQ字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: YYQ字幕组
@@ -2948,8 +2946,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 爱恋字幕社
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:爱恋字幕社)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 爱恋字幕社
@@ -2962,8 +2960,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 白恋字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:白恋字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 白恋字幕组
@@ -2976,8 +2974,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 百冬练习组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:百冬练习组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 百冬练习组
@@ -2990,8 +2988,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 霸王龙压制组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:霸王龙压制组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 霸王龙压制组
@@ -3004,8 +3002,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 半糖字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:半糖字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 半糖字幕组
@@ -3018,8 +3016,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 波子汽水汉化组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:波子汽水汉化组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 波子汽水汉化组
@@ -3032,8 +3030,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 不当舔狗制作组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:不当舔狗制作组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 不当舔狗制作组
@@ -3046,8 +3044,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 擦枪字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:擦枪字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 擦枪字幕组
@@ -3060,8 +3058,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 澄空学园
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:澄空学园)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 澄空学园
@@ -3074,8 +3072,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 晨曦制作
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:晨曦制作)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 晨曦制作
@@ -3088,8 +3086,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 恶魔岛字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:恶魔岛字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 恶魔岛字幕组
@@ -3102,8 +3100,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 风车字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:风车字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 风车字幕组
@@ -3116,8 +3114,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 风之圣殿字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:风之圣殿字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 风之圣殿字幕组
@@ -3130,8 +3128,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 枫叶字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:枫叶字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 枫叶字幕组
@@ -3144,8 +3142,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 幻樱字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:幻樱字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 幻樱字幕组
@@ -3158,8 +3156,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 幻月字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:幻月字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 幻月字幕组
@@ -3172,8 +3170,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 幻之字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:幻之字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 幻之字幕组
@@ -3186,8 +3184,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 婚姻与健美字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:婚姻与健美字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 婚姻与健美字幕组
@@ -3200,8 +3198,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 极影字幕社
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:极影字幕社)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 极影字幕社
@@ -3214,8 +3212,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 极彩字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:极彩字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 极彩字幕组
@@ -3228,8 +3226,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 康复中心字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:康复中心字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 康复中心字幕组
@@ -3242,8 +3240,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 康复重症监护室字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:康复重症监护室字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 康复重症监护室字幕组
@@ -3256,8 +3254,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 酷漫字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:酷漫字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 酷漫字幕组
@@ -3270,8 +3268,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 冷番补完字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:冷番补完字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 冷番补完字幕组
@@ -3284,8 +3282,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 离谱Sub
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:离谱Sub)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 离谱Sub
@@ -3298,8 +3296,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 六四位元字幕組
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:六四位元字幕組)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 六四位元字幕組
@@ -3312,8 +3310,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 漫猫字幕社
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:漫猫字幕社)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 漫猫字幕社
@@ -3326,8 +3324,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 漫游字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:漫游字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 漫游字幕组
@@ -3340,8 +3338,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 咪梦字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:咪梦字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 咪梦字幕组
@@ -3354,8 +3352,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 喵萌奶茶屋
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:喵萌奶茶屋)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 喵萌奶茶屋
@@ -3368,8 +3366,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 梦蓝字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:梦蓝字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 梦蓝字幕组
@@ -3382,8 +3380,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 萌樱字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:萌樱字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 萌樱字幕组
@@ -3396,8 +3394,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 魔穗字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:魔穗字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 魔穗字幕组
@@ -3410,8 +3408,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 奶²
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:奶²)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 奶²
@@ -3424,8 +3422,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 涅槃字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:涅槃字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 涅槃字幕组
@@ -3438,8 +3436,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 千夏字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:千夏字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 千夏字幕组
@@ -3452,8 +3450,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 氢气烤肉架
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:氢气烤肉架)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 氢气烤肉架
@@ -3466,8 +3464,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 轻之国度字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:轻之国度字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 轻之国度字幕组
@@ -3480,8 +3478,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 熔岩动画
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:熔岩动画)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 熔岩动画
@@ -3494,8 +3492,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: S1百综字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:S1百综字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: S1百综字幕组
@@ -3508,8 +3506,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 生徒会字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:生徒会字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 生徒会字幕组
@@ -3522,8 +3520,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 霜庭云花Sub
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:霜庭云花Sub)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 霜庭云花Sub
@@ -3536,8 +3534,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 天香字幕社
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:天香字幕社)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 天香字幕社
@@ -3550,8 +3548,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 甜饼字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:甜饼字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 甜饼字幕组
@@ -3564,8 +3562,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 驯兽师联盟
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:驯兽师联盟)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 驯兽师联盟
@@ -3578,8 +3576,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 豌豆字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:豌豆字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 豌豆字幕组
@@ -3592,8 +3590,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 弯弯字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:弯弯字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 弯弯字幕组
@@ -3606,8 +3604,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 小玩剧字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:小玩剧字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 小玩剧字幕组
@@ -3620,8 +3618,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 星空字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:星空字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 星空字幕组
@@ -3634,8 +3632,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 雪飘工作室
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:雪飘工作室)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 雪飘工作室
@@ -3648,8 +3646,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 夜莺家族
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:夜莺家族)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 夜莺家族
@@ -3662,8 +3660,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 亿次研同好会
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:亿次研同好会)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 亿次研同好会
@@ -3676,8 +3674,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 亿万同人字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:亿万同人字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 亿万同人字幕组
@@ -3690,8 +3688,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 异域-11番小队
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:异域-11番小队)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 异域-11番小队
@@ -3704,8 +3702,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 银色子弹字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:银色子弹字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 银色子弹字幕组
@@ -3718,8 +3716,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 永恒译制
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:永恒译制)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 永恒译制
@@ -3732,8 +3730,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 悠哈璃羽字幕社
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:悠哈璃羽字幕社)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 悠哈璃羽字幕社
@@ -3746,8 +3744,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 圆环记录攻略组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:圆环记录攻略组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 圆环记录攻略组
@@ -3760,8 +3758,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 云歌字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:云歌字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 云歌字幕组
@@ -3774,8 +3772,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 织梦字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:织梦字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 织梦字幕组
@@ -3788,8 +3786,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 智械尚未危机制作
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:智械尚未危机制作)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 智械尚未危机制作
@@ -3802,8 +3800,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 诸神字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:诸神字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 诸神字幕组
@@ -3816,8 +3814,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Prejudice-Studio
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Prejudice-Studio)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Prejudice-Studio
@@ -3830,8 +3828,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: AISR
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:AISR)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: AISR
@@ -3844,8 +3842,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 老K
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:老K)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 老K
@@ -3858,8 +3856,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: LGNB@oSpecialCN
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:LGNB@oSpecialCN)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: LGNB@oSpecialCN
@@ -3872,8 +3870,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: cXcY@FRDS
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:cXcY@FRDS)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: cXcY@FRDS
@@ -3886,8 +3884,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 北宇治字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:北宇治字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 北宇治字幕组
@@ -3900,8 +3898,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 云光字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:云光字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 云光字幕组
@@ -3914,8 +3912,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 猎户发布组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:猎户发布组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 猎户发布组
@@ -3928,8 +3926,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: SW字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:SW字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: SW字幕组
@@ -3942,8 +3940,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 六道是我大鸽汉化组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:六道是我大鸽汉化组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 六道是我大鸽汉化组
@@ -3956,8 +3954,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: jibaketa-粤语版
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:jibaketa-粤语版)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: jibaketa-粤语版
@@ -3970,8 +3968,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: ❀拨雪寻春❀
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:❀拨雪寻春❀)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: ❀拨雪寻春❀
@@ -3984,8 +3982,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 新Sub
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:新Sub)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 新Sub
@@ -3998,8 +3996,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: DreamHD
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:DreamHD)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: DreamHD
@@ -4012,8 +4010,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 桜都字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:桜都字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 桜都字幕组
@@ -4026,8 +4024,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: LittleBakas!
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:LittleBakas!)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: LittleBakas!
@@ -4040,8 +4038,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 动漫国字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:动漫国字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 动漫国字幕组
@@ -4054,8 +4052,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 猫恋汉化组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:猫恋汉化组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 猫恋汉化组
@@ -4068,8 +4066,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: OPFans枫雪动漫
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:OPFans枫雪动漫)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: OPFans枫雪动漫
@@ -4082,8 +4080,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: CR
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:CR)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: CR
@@ -4096,8 +4094,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: AMZN
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:AMZN)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: AMZN
@@ -4110,8 +4108,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: NF
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:NF)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: NF
@@ -4124,8 +4122,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: HMAX
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:HMAX)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: HMAX
@@ -4138,8 +4136,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: Remux
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:Remux)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: Remux
@@ -4152,8 +4150,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: DSNP
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:DSNP)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: DSNP
@@ -4166,8 +4164,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 前伪汉化组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:前伪汉化组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 前伪汉化组
@@ -4180,8 +4178,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 华盟字幕社
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:华盟字幕社)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 华盟字幕社
@@ -4194,8 +4192,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 黑白字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:黑白字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 黑白字幕组
@@ -4208,8 +4206,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 香子兰翻译同好会
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:香子兰翻译同好会)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 香子兰翻译同好会
@@ -4222,8 +4220,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 鈴風字幕組
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:鈴風字幕組)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 鈴風字幕組
@@ -4236,8 +4234,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: ViuTV
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:ViuTV)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: ViuTV
@@ -4250,8 +4248,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 樱桃花字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:樱桃花字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 樱桃花字幕组
@@ -4264,8 +4262,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 六四位元字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:六四位元字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 六四位元字幕组
@@ -4278,8 +4276,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 西农YUI汉化组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:西农YUI汉化组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 西农YUI汉化组
@@ -4292,8 +4290,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 神椿观测站
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:神椿观测站)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 神椿观测站
@@ -4306,8 +4304,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: FROGWeb
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:FROGWeb)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: FROGWeb
@@ -4320,8 +4318,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 绿茶字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:绿茶字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 绿茶字幕组
@@ -4334,8 +4332,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 晚街与灯
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:晚街与灯)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 晚街与灯
@@ -4348,8 +4346,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 隣天使字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:隣天使字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 隣天使字幕组
@@ -4362,8 +4360,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 時雨初空
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:時雨初空)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 時雨初空
@@ -4376,8 +4374,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 三明治摆烂组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:三明治摆烂组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 三明治摆烂组
@@ -4390,8 +4388,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 羽州褴褛鸢组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:羽州褴褛鸢组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 羽州褴褛鸢组
@@ -4404,8 +4402,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 小栗帽后援会
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:小栗帽后援会)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 小栗帽后援会
@@ -4418,8 +4416,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 虹作坊汉化组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:虹作坊汉化组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 虹作坊汉化组
@@ -4432,8 +4430,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 极彩花梦
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:极彩花梦)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 极彩花梦
@@ -4446,8 +4444,8 @@ render:
       when:
         all:
           - field: filename_keywords
-            operator: sa_release_group
-            value: 树屋字幕组
+            operator: matches
+            value: (?i)(?:^|[ ._\-\[【])(?:树屋字幕组)(?:$|[ ._\-\]】])
       actions:
         - field: release_group
           value: 树屋字幕组
@@ -6082,7 +6080,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?<=[\W_])4k(?=[\W_])
+      match: (?P<__steltrix_import_prefix>[\W_])(?P<__steltrix_import_value>4k)(?P<__steltrix_import_suffix>[\W_])
       replace: 2160p
       terminal: false
       origin:
@@ -6132,7 +6130,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?i)\.H\.264(?=[\W_])
+      match: (?P<__steltrix_import_value>(?i)\.H\.264)(?P<__steltrix_import_suffix>[\W_])
       replace: .AVC
       terminal: false
       origin:
@@ -6142,7 +6140,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?i)\.H\.265(?=[\W_])
+      match: (?P<__steltrix_import_value>(?i)\.H\.265)(?P<__steltrix_import_suffix>[\W_])
       replace: .HEVC
       terminal: false
       origin:
@@ -6152,7 +6150,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?i)\.H264(?=[\W_])
+      match: (?P<__steltrix_import_value>(?i)\.H264)(?P<__steltrix_import_suffix>[\W_])
       replace: .AVC
       terminal: false
       origin:
@@ -6162,7 +6160,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?i)\.H265(?=[\W_])
+      match: (?P<__steltrix_import_value>(?i)\.H265)(?P<__steltrix_import_suffix>[\W_])
       replace: .HEVC
       terminal: false
       origin:
@@ -6192,7 +6190,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?i)\.x264(?=[\W_])
+      match: (?P<__steltrix_import_value>(?i)\.x264)(?P<__steltrix_import_suffix>[\W_])
       replace: .AVC
       terminal: false
       origin:
@@ -6202,7 +6200,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?i)\.x265(?=[\W_])
+      match: (?P<__steltrix_import_value>(?i)\.x265)(?P<__steltrix_import_suffix>[\W_])
       replace: .HEVC
       terminal: false
       origin:
@@ -6311,7 +6309,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?<=[\W_])(?i:(?:DV|DoVi)\s+P(?:[4-9]|10))(?=[\W_])
+      match: (?P<__steltrix_import_prefix>[\W_])(?P<__steltrix_import_value>(?i:(?:DV|DoVi)\s+P(?:[4-9]|10)))(?P<__steltrix_import_suffix>[\W_])
       replace: DoVi
       terminal: false
       origin:
@@ -6321,7 +6319,7 @@ render:
       enabled: true
       target: both
       engine: re2
-      match: (?<=^|[^A-Za-z])(?i:DV)(?=$|[^A-Za-z])
+      match: (?P<__steltrix_import_prefix>^|[^A-Za-z])(?P<__steltrix_import_value>(?i:DV))(?P<__steltrix_import_suffix>$|[^A-Za-z])
       replace: DoVi
       terminal: false
       origin:
@@ -6349,19 +6347,6 @@ naming:
 classification:
   mode: first_match
   movie:
-    - id: class-movie-93871643
-      name: Codex E2E 发布回滚测试
-      enabled: true
-      path: 电影/Codex E2E 测试
-      when:
-        all:
-          - field: filename_keywords
-            operator: equals
-            value: CODEX_E2E_NEVER_MATCH_20260725
-      fallback: false
-      origin:
-        kind: local
-        source_id: local
     - id: import-movie-001-rule-branch-01
       name: 特摄电影
       enabled: true
@@ -7494,6 +7479,301 @@ classification:
         source_id: local
 upgrade:
   profiles:
+    - id: default-upgrade
+      name: 默认配置
+      enabled: true
+      source_file_extract_metadata: true
+      destination_file_extract_metadata: true
+      version_control:
+        enabled: false
+        delete_invalid_destination_files: false
+        versions: []
+      attributes:
+        - key: resolution
+          name: 分辨率
+          weight: 1
+          options:
+            - name: 8K分辨率
+              pattern: 4320p
+              score: 10
+            - name: 4K分辨率
+              pattern: 2160p
+              score: 9.5
+            - name: 全高清
+              pattern: 1080p
+              score: 9
+            - name: 高清
+              pattern: 720p
+              score: 8.5
+            - name: 标清576p
+              pattern: 576p
+              score: 8
+            - name: 标清480p
+              pattern: 480p
+              score: 7.5
+            - name: 低清360p
+              pattern: 360p
+              score: 7
+        - key: video_codec
+          name: 视频编码
+          weight: 1
+          options:
+            - name: AV1
+              pattern: AV1
+              score: 10
+            - name: H.264
+              pattern: H.264
+              score: 9.5
+            - name: H.265
+              pattern: H.265
+              score: 9
+        - key: audio_codec
+          name: 音频编码
+          weight: 1
+          options:
+            - name: 次世代对象音频，无损，支持3D音效
+              pattern: DTS:X
+              score: 10
+            - name: Dolby 无损 + Atmos对象音频
+              pattern: TrueHD Dolby Atmos 7.1
+              score: 9.5
+            - name: Dolby 无损 + Atmos对象音频
+              pattern: TrueHD Dolby Atmos 5.1
+              score: 9
+            - name: 无损，7.1声道
+              pattern: DTS-HD MA 7.1
+              score: 8.5
+            - name: 无损，5.1声道
+              pattern: DTS-HD MA 5.1
+              score: 8
+            - name: Dolby TrueHD 无损，7.1声道（无 Atmos）
+              pattern: TrueHD 7.1
+              score: 7.5
+            - name: Dolby TrueHD 无损，5.1声道（无 Atmos）
+              pattern: TrueHD 5.1
+              score: 7
+            - name: 有损高比特率
+              pattern: DTS-HD
+              score: 6.5
+            - name: 有损 + Atmos对象音频
+              pattern: DDP Dolby Atmos 5.1
+              score: 6
+            - name: 有损（Dolby Digital Plus）
+              pattern: DDP 5.1
+              score: 5.5
+            - name: 有损，传统格式（可达1.5 Mbps）
+              pattern: DTS
+              score: 5
+            - name: 无压缩（体积大，但可能只是2.0）
+              pattern: PCM
+              score: 4.5
+            - name: 有损（AC3）
+              pattern: Dolby Digital|DDP
+              score: 4
+            - name: 同上（Dolby Digital 别称）
+              pattern: AC3
+              score: 3.5
+            - name: 有损，常见于流媒体
+              pattern: AAC
+              score: 3
+        - key: custom
+          name: 自定义属性
+          weight: 1
+          options: []
+        - key: dolby_vision
+          name: 杜比视界
+          weight: 1
+          options:
+            - name: 杜比视界 P7
+              pattern: Dolby Vision P7
+              score: 10
+            - name: 杜比视界 P5
+              pattern: Dolby Vision P5
+              score: 9.8
+            - name: 杜比视界 P8
+              pattern: Dolby Vision P8
+              score: 9.5
+            - name: 杜比视界
+              pattern: Dolby Vision
+              score: 9
+        - key: dynamic_range
+          name: 动态范围
+          weight: 1
+          options:
+            - name: HDR10+
+              pattern: HDR10\+
+              score: 8.5
+            - name: HDR10
+              pattern: HDR10
+              score: 7.5
+            - name: HDR
+              pattern: HDR
+              score: 7
+            - name: HLG
+              pattern: HLG
+              score: 6.5
+            - name: SDR
+              pattern: SDR
+              score: 6
+        - key: release_group
+          name: 发行组
+          weight: 1
+          options: []
+        - key: color_depth
+          name: 色彩深度
+          weight: 1
+          options:
+            - name: 12-bit
+              pattern: 12-bit
+              score: 10
+            - name: 10-bit
+              pattern: 10-bit
+              score: 9.5
+            - name: 8-bit
+              pattern: 8-bit
+              score: 9
+        - key: frame_rate
+          name: 帧率
+          weight: 1
+          options:
+            - name: 120帧率
+              pattern: 120fps
+              score: 10
+            - name: 60帧率
+              pattern: 60fps
+              score: 9.5
+            - name: 30帧率
+              pattern: 30fps
+              score: 9
+            - name: 25帧率
+              pattern: 25fps
+              score: 8.5
+            - name: 24帧率
+              pattern: 24fps
+              score: 8
+        - key: resource_type
+          name: 资源类型
+          weight: 1
+          options:
+            - name: 超高清蓝光
+              pattern: Ultra HD
+              score: 10
+            - name: 蓝光
+              pattern: Blu-Ray
+              score: 9.5
+            - name: 原盘重封装
+              pattern: Remux
+              score: 9
+            - name: 网络下载
+              pattern: WEB-DL
+              score: 8.5
+        - key: subtitle
+          name: 字幕
+          weight: 1
+          options:
+            - name: PGS中英双语特效字幕
+              pattern: PGS 简英特效|PGS 简中特效|PGS 中英特效|PGS 中文双语特效
+              score: 10
+            - name: PGS中文特效字幕
+              pattern: PGS 简中特效|PGS 中文特效
+              score: 10
+            - name: PGS中英双语字幕
+              pattern: PGS 简英双语|PGS 简中双语|PGS 中英双语|PGS 中文双语
+              score: 10
+            - name: PGS简体中文字幕
+              pattern: PGS 简体中文
+              score: 10
+            - name: PGS繁体中文字幕
+              pattern: PGS 繁体中文
+              score: 10
+            - name: ASS中英双语特效字幕
+              pattern: ASS 简英特效|ASS 简中特效|ASS 中英特效|ASS 中文双语特效
+              score: 10
+            - name: ASS中文特效字幕
+              pattern: ASS 简中特效|ASS 中文特效
+              score: 10
+            - name: ASS中英双语字幕
+              pattern: ASS 简英双语|ASS 简中双语|ASS 中英双语|ASS 中文双语
+              score: 10
+            - name: ASS简体中文字幕
+              pattern: ASS 简体中文
+              score: 9
+            - name: ASS繁体中文字幕
+              pattern: ASS 繁体中文
+              score: 10
+            - name: SRT中英双语字幕
+              pattern: SRT 简英双语|SRT 简中双语|SRT 中英双语|SRT 中文双语
+              score: 8
+            - name: SRT简体中文字幕
+              pattern: SRT 简体中文
+              score: 10
+            - name: SRT繁体中文字幕
+              pattern: SRT 繁体中文
+              score: 10
+            - name: PGS字幕
+              pattern: PGS
+              score: 7
+            - name: ASS字幕
+              pattern: ASS
+              score: 6
+            - name: SRT字幕
+              pattern: SRT
+              score: 5
+            - name: PGS非中文字幕（英文/日文/韩文等）
+              pattern: PGS 英文|PGS 日文|PGS 韩文
+              score: -1
+            - name: ASS非中文字幕（英文/日文/韩文等）
+              pattern: ASS 英文|ASS 日文|ASS 韩文
+              score: -1
+            - name: SRT非中文字幕（英文/日文/韩文等）
+              pattern: SRT 英文|SRT 日文|SRT 韩文
+              score: -1
+        - key: file_extension
+          name: 文件扩展名
+          weight: 1
+          options:
+            - name: MKV
+              pattern: .mkv
+              score: 10
+            - name: MP4
+              pattern: .mp4
+              score: 9
+            - name: TS
+              pattern: .ts
+              score: 8
+            - name: M2TS
+              pattern: .m2ts
+              score: 7
+            - name: ISO
+              pattern: .iso
+              score: 6
+            - name: AVI
+              pattern: .avi
+              score: 5
+            - name: RMVB
+              pattern: .rmvb
+              score: 4
+            - name: WMV
+              pattern: .wmv
+              score: 3
+            - name: MPEG
+              pattern: .mpeg
+              score: 2.5
+            - name: MOV
+              pattern: .mov
+              score: 2
+      video_bitrate:
+        score: 10
+        weight: 1
+      file_size:
+        score: 10
+        weight: 1
+      always_override:
+        score: 99999
+        weight: 0
+      origin:
+        kind: builtin
+        source_id: builtin
     - id: sa-upgrade
       name: 殊途权重洗版
       enabled: true
